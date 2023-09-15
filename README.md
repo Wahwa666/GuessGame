@@ -18,7 +18,7 @@
 
 
 2. Изменить localHost:http://localhost:7207 в App.config во всех value
-
+<a href="https://ibb.co/yW0MWDC"><img src="https://i.ibb.co/yW0MWDC/tsm1.png" alt="tsm1" border="0"></a>
 <a href="https://ibb.co/MNxHVbq"><img src="https://i.ibb.co/KypgqYC/image-Git1-10.png" alt="image-Git1-10" border="0"></a>
 
 
