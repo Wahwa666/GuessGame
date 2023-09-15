@@ -1,0 +1,617 @@
+body 
+{
+    margin: 0;  
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+*,
+*::before,
+*::after 
+{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+}
+
+
+hr
+{
+display: block;
+height: 1px;
+background-color: #e5e5e5;
+margin: 40px 0;
+border: 0;
+
+}
+
+/* Container */ 
+.container 
+{
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+} 
+
+
+.intro 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("C:/Artur/maket/images/intro.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro_inner
+{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.intro_suptitle
+{
+    color: #fff;
+    font-size: 72px;    
+    font-family: 'Kaushan Script', cursive;
+  
+    margin-bottom: 20px;
+}
+
+.intro_title
+{
+    font-weight: 700;
+    font-size: 150px;
+   
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.intro_title:after 
+{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;    
+    background-color: #fff;
+    margin: 60px auto 60px;
+}
+/* Header */
+
+.header 
+{
+padding-top: 30px;
+width: 100;
+position: absolute;
+z-index: 1000;
+top:0;
+left: 0;    
+right: 0;
+
+}
+
+.header___inner
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.header___logo 
+{
+font-size: 30px;
+font-weight: 700 ;
+color: #fff;
+}
+
+/* nav */
+.nav 
+{
+  font-size: 14px;
+  text-transform: uppercase;
+
+}
+
+
+.nav_link
+{   
+ color: #fff;
+text-decoration: none;
+transition: color 0.1s linear;
+vertical-align: top;
+margin: 15px;
+right:  0;
+position: relative;
+}
+
+.nav_link:after 
+{
+    content: "";
+    display: none;
+    width: 100%;
+    height: 3px;
+    background-color: #fce38a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition:opacity .1s linear;
+
+
+}
+
+
+.nav_link:hover 
+{
+    color: #fce38a;
+}
+
+
+.nav_link:hover:after 
+{
+    display: block;
+    opacity: 1;
+}
+
+/* button */ 
+
+.btn
+{
+    display: inline block;
+    border: 3px solid #fff;
+    padding: 3px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color .1s linear , color .1s linear;
+}
+
+.btn:hover
+{
+    background-color: white;
+    color: black;
+}
+
+/* slider */
+
+
+.slaider 
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0 ;
+    left: 0;
+    z-index: 1;
+  
+}
+
+
+.slider_item
+{
+    width: 23%;
+    text-transform: uppercase;
+    position: relative;
+    padding: 15px 0;
+    color: white;
+    font-size: 14px;
+    border-top: 3px solid #fff;
+    position: relative;
+}
+.slider_item.active
+{
+    opacity: 1;
+}
+
+.slider_item.active:before
+{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #f38181;
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+
+}
+
+.slaider_inner 
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.slider_number
+{
+    font-weight: 800;
+    font-size: 24px;
+}
+
+
+/* SECTION */
+.section
+{
+    padding: 80px 0;
+}
+
+.section--devices
+{
+    background: url("C:/Artur/Git/images/background_design.jpg") center no-repeat;
+       -webkit-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    max-height: 910px;
+} 
+
+.section_header
+{
+margin: 0 auto 50px;
+text-align: center;
+width: 100%;
+max-width: 990px;
+
+}
+
+.section_suptitle
+{
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+    color: #333;
+
+}
+
+.section_title
+{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.section_title--devices
+{
+    margin-bottom: 800px;
+}
+
+.section_title:after
+{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 60px;
+    background-color: #f38181;
+    margin: 40px auto 45px ;
+}
+
+.section_text
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999;
+}
+
+
+/* ABOUT */
+
+.about
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.about_items
+{
+    width: 379px;
+    background-color: #95e1d3;
+    position: relative;
+}
+
+.about_img
+{
+    background: linear-gradient(to bottom,
+    #f38181 , #fce38a);
+    transition: transform 0.2s linear;
+}
+
+
+.about_items:hover .about_img img 
+{
+    opacity: 0.1;
+}
+
+
+.about_items:hover .about_img
+{
+    transform: translate3d(-10px,-10px,0);
+}
+
+.about_img img 
+{
+    transition: opacity 0.1s linear;
+    display: block;
+}
+
+.about_text
+{
+    width: 100%;
+    position: absolute; 
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+    opacity: 0;
+    transition: opacity .1s linear;
+}
+
+.about_items:hover .about_text
+{
+    opacity: 1;
+}
+
+/* statistics */
+
+.statistics
+{
+    margin-top: 110px;
+    background-color: #95e1d3;
+}
+
+.statistics_storage
+{
+    display: flex;
+}
+
+.statistics_numbers 
+{
+    font-size: 72px;
+    font-weight: 900;
+    color: #fff;
+}
+
+
+.statistics_words
+{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+    .statistics_items
+{
+    border-left: 1px solid #fff;
+    padding: 30px;
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.statistics_items:last-child
+{
+    border-right: 1px solid #fff;
+}
+
+
+/* SERVICE */
+
+
+.service
+{
+    display: flex;
+}
+
+.service_item
+{
+    flex: 1 1 0;
+    padding-left: 85px;
+    padding-right: 40px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+
+}
+.service_icon
+{
+    position: absolute;
+    left: 20px;
+    right: 0;
+    z-index: 1;
+}
+
+.service_title
+{
+text-transform: uppercase;
+font-size: 14px;
+color: black;
+font-weight: 600;
+}
+
+.service_text
+{
+    font-style: 12px;
+    color: #b6b6b6;
+    margin-top: 20px;
+}
+
+
+/* WEDO */
+
+
+.wedo
+{
+    display: flex;
+}
+
+.wedo_items
+{
+    width: 50%;
+}
+
+/*accordion */
+
+.wedo_accordion
+{   
+    border: 1px solid #e5e5e5;
+}
+
+.accordion_header
+{
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion_title
+{
+    padding: 15px 15px 15px 75px;
+}
+
+.accordion_icon
+{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.accordion_content
+{
+    padding: 20px;
+}
+
+
+
+
+/* REVIEWS */
+
+.section--gray
+{
+    background-color: #f8f8f8;
+}
+
+
+.reviews_item
+{
+    position: relative;
+    padding-left: 205px;
+}
+
+.reviews_icon
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reviews
+{
+    padding: 0 110px;
+}
+
+.reviews_text
+{
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #999999;
+}
+
+
+
+.reviews_author
+{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    margin-top: 7px;
+}
+
+.reviews_author:before
+{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 3px;
+    width: 60px;
+    background-color: #f38181;
+    margin-right: 10px;
+}
+
+
+
+/* TEAM */
+
+.team_items
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.worker_name
+{
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #484848;
+}
+
+.worker_position
+{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #b6b6b6;
+}
+
+/* partners */
+
+.section--partners
+{
+background-color: #f8f8f8;
+}
+
+.partners_items
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* somework */
+
+.column1
+{
+    display: flex;
+    flex: 1 1 0;  
+}
+
+.somework_items
+{
+    display: flex;
+}
