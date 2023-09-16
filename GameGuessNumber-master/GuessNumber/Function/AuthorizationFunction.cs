@@ -19,27 +19,36 @@ namespace PanGamesFunction.Function
         [HttpTrigger(AuthorizationLevel.Function, "get", Route = "authorization/{login}/{password}")] HttpRequest req,
         string login, string password)
         {
-            AuthorizationFunctionResponse response = new AuthorizationFunctionResponse();
-            UserInfoRepository auth = new UserInfoRepository();
-            response.userResponse = auth.GetUserByLogin(login);
-            if (response.userResponse == null)
+            try
             {
-                response.correctInformation = false;
-                response.message = "Ќе правильный логин или пользовател€ не существует";
-                return new OkObjectResult(response);
-            } else
-            if ((response.userResponse.Login == login) & (response.userResponse.Password != password))
-            {
-                response.correctInformation = false;
-                response.message = "Ќе правильный пароль";
-                return new OkObjectResult(response);
-            } else
-            if ((response.userResponse.Login == login) & (response.userResponse.Password == password))
-            {
-                response.correctInformation = true;
-                return new OkObjectResult(response);
+                AuthorizationFunctionResponse response = new AuthorizationFunctionResponse();
+                UserInfoRepository auth = new UserInfoRepository();
+                response.userResponse = auth.GetUserByLogin(login);
+                if (response.userResponse == null)
+                {
+                    response.correctInformation = false;
+                    response.message = "Ќе правильный логин или пользовател€ не существует";
+                    return new OkObjectResult(response);
+                }
+                else
+                if ((response.userResponse.Login == login) & (response.userResponse.Password != password))
+                {
+                    response.correctInformation = false;
+                    response.message = "Ќе правильный пароль";
+                    return new OkObjectResult(response);
+                }
+                else
+                if ((response.userResponse.Login == login) & (response.userResponse.Password == password))
+                {
+                    response.correctInformation = true;
+                    return new OkObjectResult(response);
+                }
+                return null;
             }
-            return null;
+            catch (Exception ex)
+            {
+                return new ObjectResult(ex);
+            }
         }
     }
 }
